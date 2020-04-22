@@ -19,7 +19,7 @@ namespace CloudflareSolverRe.Types.Javascript
 
         public Dictionary<string, string> ClearanceBody => new Dictionary<string, string>
         {
-            { "r", R },
+            { "r", Uri.EscapeDataString(R) },
             { "jschl_vc", VerificationCode},
             { "pass", Pass },
             { "jschl_answer", Answer.ToString("R", CultureInfo.InvariantCulture) }
