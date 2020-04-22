@@ -1,7 +1,7 @@
 # Important
 This library use for temporary only.
 <br />
-owner library: https://github.com/RyuzakiH/CloudflareSolverRe
+Thank for owner library: https://github.com/RyuzakiH/CloudflareSolverRe
 
 ## Example
 ```
