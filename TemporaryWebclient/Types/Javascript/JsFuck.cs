@@ -16,11 +16,9 @@ namespace CloudflareSolverRe.Types.Javascript
 
         public static double DecodeNumber(string encodedNumber)
         {
-            var digits = Regex.Match(encodedNumber, NumberPattern)
-                .Groups["digits"].Captures.Cast<Capture>()
-                .Select(c => Regex.Matches(c.Value, OnePattern).Count);
-
-            return double.Parse(string.Join(string.Empty, digits));
+            Jint.Engine engine = new Jint.Engine();
+            var test = engine.Execute(encodedNumber).GetCompletionValue().ToObject().ToString();
+            return double.Parse(test);
         }
 
 
