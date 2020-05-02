@@ -6,13 +6,16 @@
     <Authors>longcharmroeun</Authors>
     <Company>unknow</Company>
     <Product>TemporaryWebclient</Product>
-    <Description>bypass cloudflare ddos protection</Description>
+    <Description>bypass cloudflare ddos protection new update</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/longcharmroeun/TemporaryWebclient</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/longcharmroeun/TemporaryWebclient</RepositoryUrl>
+    <PackageReleaseNotes>bypass,cloudflare,ddos,anti ddos,protection,anti cloudflare,</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Jint" Version="2.11.58" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
   <ItemGroup>
