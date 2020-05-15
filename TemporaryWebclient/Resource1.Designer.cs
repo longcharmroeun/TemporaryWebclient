@@ -68,11 +68,11 @@ namespace TemporaryWebclient {
         ///  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
         ///  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge,chrome=1&quot; /&gt;
         ///  &lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot; /&gt;
-        ///  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1&quot; /&gt;
+        ///  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot; /&gt;
         ///  &lt;meta http-equiv=&quot;refresh&quot; content=&quot;12&quot;&gt;
         ///  &lt;title&gt;Just a moment...&lt;/title&gt;
         ///  &lt;style type=&quot;text/css&quot;&gt;
-        ///    html, body {width: 100%; height: 100%; mar [rest of string was truncated]&quot;;.
+        ///    html, body {width: 100%; height: 100%; margin: 0; padding: 0 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string String1 {
             get {

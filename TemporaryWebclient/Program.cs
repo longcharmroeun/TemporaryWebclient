@@ -7,7 +7,7 @@ namespace TemporaryWebclient
 {
     class Program
     {
-        static async System.Threading.Tasks.Task Main(string[] args)
+        static void Main(string[] args)
         {
             var target = new Uri("https://kissasian.sh/");
 
