@@ -8,13 +8,14 @@
     <Product>TemporaryWebclient</Product>
     <Description>bypass cloudflare ddos protection</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <AssemblyVersion>1.0.2.0</AssemblyVersion>
     <FileVersion>1.0.2.0</FileVersion>
     <Copyright>MIT</Copyright>
     <PackageProjectUrl>https://github.com/longcharmroeun/TemporaryWebclient</PackageProjectUrl>
     <RepositoryUrl>https://github.com/longcharmroeun/TemporaryWebclient</RepositoryUrl>
     <StartupObject></StartupObject>
+    <PackageTags>bypass</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

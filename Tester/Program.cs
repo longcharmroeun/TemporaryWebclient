@@ -8,7 +8,7 @@ namespace Tester
     {
         static void Main(string[] args)
         {
-            var target = new Uri("https://kissasian.sh/");
+            var target = new Uri("https://kissanime.ru/");
 
             var handler = new ClearanceHandler
             {
