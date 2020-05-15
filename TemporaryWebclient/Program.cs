@@ -13,7 +13,7 @@ namespace TemporaryWebclient
 
             var handler = new ClearanceHandler
             {
-                MaxTries = 100,
+                MaxTries = 3,
                 ClearanceDelay = 3000
             };
 

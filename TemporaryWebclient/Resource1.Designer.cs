@@ -61,18 +61,18 @@ namespace TemporaryWebclient {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;!DOCTYPE HTML&gt;
-        ///&lt;html lang=&quot;en-US&quot;&gt;
-        ///&lt;head&gt;
-        ///  &lt;meta charset=&quot;UTF-8&quot; /&gt;
-        ///  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
-        ///  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge,chrome=1&quot; /&gt;
-        ///  &lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot; /&gt;
-        ///  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot; /&gt;
-        ///  &lt;meta http-equiv=&quot;refresh&quot; content=&quot;12&quot;&gt;
-        ///  &lt;title&gt;Just a moment...&lt;/title&gt;
-        ///  &lt;style type=&quot;text/css&quot;&gt;
-        ///    html, body {width: 100%; height: 100%; margin: 0; padding: 0 [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to HTTP/1.1 503 Service Temporarily Unavailable
+        ///Date: Fri, 15 May 2020 15:41:43 GMT
+        ///Content-Type: text/html; charset=UTF-8
+        ///Connection: close
+        ///X-Frame-Options: SAMEORIGIN
+        ///Cache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+        ///Expires: Thu, 01 Jan 1970 00:00:01 GMT
+        ///Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+        ///Vary: Accept-Encoding
+        ///Server: cloudflare
+        ///CF-RAY: 593df6fdc937c3ae-SIN
+        ///cf-request-id: 02ba98b29e0000 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string String1 {
             get {
