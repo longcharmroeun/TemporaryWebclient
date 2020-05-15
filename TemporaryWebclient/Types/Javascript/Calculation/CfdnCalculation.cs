@@ -10,7 +10,7 @@ namespace CloudflareSolverRe.Types.Javascript
 
         private string GetCfdnId(string cfdn, string k)
         {
-            var cfdnId = new Regex("<div id=\"(?<cfdnId>.*?)\">", RegexOptions.Singleline).Matches(cfdn).FirstOrDefault().Groups["cfdnId"].Value;
+            var cfdnId = new Regex("<div id=\"(?<cfdnId>.*?)\">", RegexOptions.Singleline).Matches(cfdn)[0].Groups["cfdnId"].Value;
             var kCode = cfdnId.Remove(cfdnId.Length - 1);
             return kCode + JsFuck.DecodeNumber(k).ToString();
         }

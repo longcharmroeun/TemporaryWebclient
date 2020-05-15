@@ -1,9 +1,8 @@
-﻿using CloudflareSolverRe;
-using CloudflareSolverRe.Types.Javascript;
-using System;
+﻿using System;
 using System.Net.Http;
+using CloudflareSolverRe;
 
-namespace TemporaryWebclient
+namespace Tester
 {
     class Program
     {
