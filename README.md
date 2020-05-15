@@ -1,10 +1,10 @@
 # Important
-This library use for temporary only.
-<br />
 Thank for owner library: https://github.com/RyuzakiH/CloudflareSolverRe
 
+## Fix Cloudflare Update 5/16/2020
+
 ## Nuget
-https://www.nuget.org/packages/TemporaryWebclient/1.0.1
+https://www.nuget.org/packages/TemporaryWebclient/1.0.3
 
 ## This library is the same as https://github.com/RyuzakiH/CloudflareSolverRe it just use third party dependencies.
 ## Document 
