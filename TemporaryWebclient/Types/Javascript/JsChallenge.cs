@@ -8,7 +8,7 @@ namespace CloudflareSolverRe.Types.Javascript
 {
     public class JsChallenge
     {
-        private static readonly Regex JsChallengeRegex = new Regex(@"<script.*?>(?<script>.*?var s,t,o,p, b,r,e,a,k,i,n,g,f, (?<className>\w+?)={""(?<propName>\w+?)"":(?<propValue>.*?)};.*?(?<calculations>\S*?\w+?\.\w+?[+\-*\/]=(?:(?<normal>(?:\+|\-|\(|\)|\!|\[|\]|\/)+?;)|(?<charCode>(?:\+|\-|\(|\)|\!|\[|\]|\/)+?\(function.*?}\(.*?\)\)\);)|(?<cfdn>function\(.\)\{var.*?;\s.*?;)))+.*?a\.value\s=\s\(\+\w+\.\w+(\s\+\s(?<addHostLength>t\.length))*?\)\.toFixed\((?<round>\d+)\);.*?},\s*(?<delay>\d+)\);.*?)<\/script>.*?<form.+?action=""(?<action>\S+?)"".*?>.*?name=""r"" value=""(?<r>\S+)"".*?value=""(?<jschl_vc>[a-z0-9]{32})"".*?id=""jschl-vc"".*?name=""pass"" value=""(?<pass>\S+?)"".*?</form>.*?(style="".*?"">(?<cf_dn>.*?)</div>\s+<div.*?){0,1}\s+</div>", RegexOptions.Singleline/* | RegexOptions.Compiled*/);
+        private static readonly Regex JsChallengeRegex = new Regex(@"<script.*?>(?<script>.*?var s,t,o,p, b,r,e,a,k,i,n,g,f, (?<className>\w+?)={""(?<propName>\w+?)"":(?<propValue>.*?)};.*?k = '(?<k>.*?)';.*?(?<calculations>\S*?\w+?\.\w+?[+\-*\/]=(?:(?<normal>(?:\+|\-|\(|\)|\!|\[|\]|\/)+?;)|(?<charCode>(?:\+|\-|\(|\)|\!|\[|\]|\/)+?\(function.*?}\(.*?\)\)\);)|(?<cfdn>function\(.\)\{var.*?;\s.*?;)))+.*?a\.value\s=\s\(\+\w+\.\w+(\s\+\s(?<addHostLength>t\.length))*?\)\.toFixed\((?<round>\d+)\);.*?},\s*(?<delay>\d+)\);.*?)<\/script>.*?<form.+?action=""(?<action>\S+?)"".*?>.*?name=""r"" value=""(?<r>\S+)"".*?value=""(?<jschl_vc>[a-z0-9]{32})"".*?id=""jschl-vc"".*?name=""pass"" value=""(?<pass>\S+?)"".*?</form>.*?(style="".*?"">(?<cf_dn>.*?)</div>\s+<div.*?){0,1}\s+</div>", RegexOptions.Singleline/* | RegexOptions.Compiled*/);
 
         public JsScript Script { get; set; }
         public JsForm Form { get; set; }
@@ -76,12 +76,13 @@ namespace CloudflareSolverRe.Types.Javascript
             var normalCaptures = challengeMatch.Groups["normal"].Captures.Cast<Capture>();
             var charCodeCaptures = challengeMatch.Groups["charCode"].Captures.Cast<Capture>();
             var cfdn = challengeMatch.Groups["cf_dn"].Value;
+            var k = challengeMatch.Groups["k"].Value;
 
             return challengeMatch.Groups["calculations"].Captures.Cast<Capture>()
-                .Select(capture => GetCalculation(capture, normalCaptures, charCodeCaptures, cfdn, siteUrl));
+                .Select(capture => GetCalculation(capture, normalCaptures, charCodeCaptures, cfdn, siteUrl, k));
         }
 
-        private static IJsCalculation GetCalculation(Capture capture, IEnumerable<Capture> normalCaptures, IEnumerable<Capture> charCodeCaptures, string cfdn, Uri siteUrl)
+        private static IJsCalculation GetCalculation(Capture capture, IEnumerable<Capture> normalCaptures, IEnumerable<Capture> charCodeCaptures, string cfdn, Uri siteUrl, string k)
         {
             var type = GetCalculationType(capture, normalCaptures, charCodeCaptures);
 
@@ -95,7 +96,7 @@ namespace CloudflareSolverRe.Types.Javascript
             }
             else
             {
-                return new CfdnCalculation(capture.Value, cfdn);
+                return new CfdnCalculation(capture.Value, cfdn, k);
             }
         }
 
