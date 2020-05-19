@@ -4,7 +4,7 @@ Thank for owner library: https://github.com/RyuzakiH/CloudflareSolverRe
 ## Fix Cloudflare Update 5/16/2020
 
 ## Nuget
-https://www.nuget.org/packages/TemporaryWebclient/1.0.3
+https://www.nuget.org/packages/TemporaryWebclient/1.0.4
 
 ## Simple
 ```c#
