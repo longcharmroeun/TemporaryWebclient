@@ -1,7 +1,4 @@
-# Important
-Thank for owner library: https://github.com/RyuzakiH/CloudflareSolverRe
-
-## Fix Cloudflare Update 7/1/2020
+# Fix Cloudflare Update 7/1/2020
 
 ## Nuget
 https://www.nuget.org/packages/TemporaryWebclient/1.0.5
@@ -33,9 +30,11 @@ var target = new Uri("https://kissanime.ru/");
 ```
 
 ## Other 
-- Please Use More MaxTries To Fix New Update Cloudflare.
-- Some Website May not Working.
+Please Use More MaxTries To Fix New Update Cloudflare.
 
-## This library is the same as https://github.com/RyuzakiH/CloudflareSolverRe it just use third party dependencies.
-## Document 
+## Issues
+Some Website May not Working.
+Ex. https://getwsocourse.com/
+
+## More Document 
 https://github.com/RyuzakiH/CloudflareSolverRe/blob/master/README.md
