@@ -1,5 +1,6 @@
 # Fix Cloudflare Update 7/1/2020
-
+![Nuget](https://img.shields.io/nuget/dt/TemporaryWebclient)
+![Nuget](https://img.shields.io/nuget/v/TemporaryWebclient)
 ## Supported Versions
 | Version | Supported          |
 | ------- | ------------------ |
