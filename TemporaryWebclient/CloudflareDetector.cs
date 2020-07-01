@@ -136,7 +136,7 @@ namespace CloudflareSolverRe
         {
             var html = await response.Content.ReadAsStringAsync();
 
-            if (response.StatusCode.Equals(HttpStatusCode.ServiceUnavailable) && html.Contains("var s,t,o,p, b,r,e,a,k,i,n,g,f,"))
+            if (response.StatusCode.Equals(HttpStatusCode.ServiceUnavailable) && html.Contains("var s,t,o,p, b,r,e,a,k,i,n,g,cpo,f,"))
             {
                 return new DetectResult
                 {
